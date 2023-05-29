@@ -1,11 +1,18 @@
 # P1X DOS Dreamer
 App for connecting to the Stable Diffusion API and generaing DOS adventure games backgrounds.
 
-![Screenshot 3](screen3.png)
-![Screenshot 4](screen4.png)
 
-![Screenshot 1](screen1.png)
-![Screenshot 2](screen2.png)
+## App Screenshots
+### Indiana Jones® and the Fate of Atlantis
+![Screenshot 1](screenshots/screen1.png)
+![Screenshot 2](screenshots/screen2.png)
+![Screenshot 2](screenshots/screen3.png)
+
+### Riven The Sequel to MYST
+![Screenshot 3](screenshots/screen3.png)
+![Screenshot 4](screenshots/screen4.png)
+
+
 
 - automatic1111 webUI compatibility
 - uses model trained by myself
@@ -16,7 +23,12 @@ App for connecting to the Stable Diffusion API and generaing DOS adventure games
 
 ## Datasets
 ### Indiana Jones® and the Fate of Atlantis
-![Dataset 1](dataset-indie.png)
+![Dataset 1](screenshots/dataset-indie.png)
 
 ### Riven The Sequel to MYST
-![Dataset 2](dataset-riven.png)
+![Dataset 2](screenshots/dataset-riven.png)
+
+## Training
+Trained on DreamBooth, automatic1111.
+- nVidia 3080 TI RTX, 24GB VRAM
+- ~35min
