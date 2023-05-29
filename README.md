@@ -9,8 +9,8 @@ App for connecting to the Stable Diffusion API and generaing DOS adventure games
 ![Screenshot 2](screenshots/screen3.png)
 
 ### Riven The Sequel to MYST
-![Screenshot 3](screenshots/screen3.png)
-![Screenshot 4](screenshots/screen4.png)
+![Screenshot 3](screenshots/screen4.png)
+![Screenshot 4](screenshots/screen5.png)
 
 
 
