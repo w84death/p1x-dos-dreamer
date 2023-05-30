@@ -5,10 +5,30 @@ from PIL import Image, ImageTk
 import tkinter as tk
 url = 'http://127.0.0.1:7860'
 payloads = {
+    "beffio Moons": {
+        "prompt": "alien looking, moon landscape beffiomoons",
+        "sampling_method": "other_method",
+        "model": "beffio-beffio-moons_2600.safetensors",
+        "sampling_method": "Euler a",
+        "steps": 50,
+        "cfg_scale": 8,
+        "width": 1024,
+        "height": 512
+    },
+    "beffio Rocket Dogs": {
+        "prompt": "rocket beffiorocketdogs",
+        "sampling_method": "other_method",
+        "model": "beffio-rocketdogs_2092.safetensors",
+        "sampling_method": "Euler a",
+        "steps": 50,
+        "cfg_scale": 8,
+        "width": 1024,
+        "height": 512
+    },
     "Riven The Sequel to MYST": {
         "prompt": "p1xriven",
         "sampling_method": "other_method",
-        "model": p1x-rivendos_3100.safetensors",
+        "model": "p1x-rivendos_3100.safetensors",
         "sampling_method": "Euler a",
         "steps": 28,
         "cfg_scale": 8,
@@ -24,29 +44,7 @@ payloads = {
         "cfg_scale": 7,
         "width": 1024,
         "height": 512
-    },
-    "beffio Rocket Dogs": {
-        "prompt": "rocket beffiorocketdogs",
-        "sampling_method": "other_method",
-        "model": "beffio-rocketdogs_2092.safetensors",
-        "sampling_method": "Euler a",
-        "steps": 50,
-        "cfg_scale": 8,
-        "width": 1024,
-        "height": 512
-    },
-    ,
-    "beffio Moons": {
-        "prompt": "alien looking, moon landscape beffiomoons",
-        "sampling_method": "other_method",
-        "model": "beffio-beffio-moons_2600.safetensors",
-        "sampling_method": "Euler a",
-        "steps": 50,
-        "cfg_scale": 8,
-        "width": 1024,
-        "height": 512
     }
-
 
     # Add more payloads here
 }
@@ -119,7 +117,7 @@ image_label.grid(row=1, column=0, columnspan=3,padx=12, pady=12)
 model_var = tk.StringVar(window)
 payloads_list = list(payloads.keys())
 payload_var = tk.StringVar(value=payloads_list[0])
-payload_dropdown = tk.OptionMenu(window, payload_var, payloads_list[0], payloads_list[1], command=load_model)
+payload_dropdown = tk.OptionMenu(window, payload_var, payloads_list[0], payloads_list[1], payloads_list[2],payloads_list[3], command=load_model)
 payload_dropdown.grid(row=2, column=0,padx=12, pady=6)
 
 counter = 0
@@ -129,5 +127,7 @@ counter_label.grid(row=2, column=1,padx=12, pady=6)
 generate_button = tk.Button(window, text="    DREAM    ", command=generate_image,fg='white', bg='blue')
 generate_button.grid(row=2, column=2,padx=12, pady=6)
 
+load_model(payloads_list[0])
 
 window.mainloop()
+
