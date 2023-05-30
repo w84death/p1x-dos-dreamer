@@ -81,7 +81,7 @@ def generate_image():
 
 
 window = tk.Tk()
-window.title("P1X DOS Dreamer")
+window.title("P1X DOS Dreamer // alpha1 / by Krzysztof Krystian Jankowski")
 window.geometry('1048x608')
 window.configure(bg='black')
 
