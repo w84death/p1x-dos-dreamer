@@ -59,6 +59,9 @@ def load_model(model_name):
     generate_button.config(state="disabled", text="...")
     payload_dropdown.config(state="disabled")
 
+    if model_name == "--- CHOOSE MODEL ---"
+        return
+
     option_payload = {
         "sd_model_checkpoint": payloads[model_name]["model"]
     }
@@ -120,8 +123,8 @@ image_label.grid(row=1, column=0, columnspan=3,padx=12, pady=12)
 
 model_var = tk.StringVar(window)
 payloads_list = list(payloads.keys())
-payload_var = tk.StringVar(value=payloads_list[0])
-payload_dropdown = tk.OptionMenu(window, payload_var, payloads_list[0], payloads_list[1], payloads_list[2],payloads_list[3], command=load_model)
+payload_var = tk.StringVar(value="--- CHOOSE MODEL ---")
+payload_dropdown = tk.OptionMenu(window, payload_var, "--- CHOOSE MODEL ---", payloads_list[0], payloads_list[1], payloads_list[2],payloads_list[3], command=load_model)
 payload_dropdown.grid(row=2, column=0,padx=12, pady=6)
 
 counter = 0
