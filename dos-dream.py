@@ -1,16 +1,17 @@
 import io
 import base64
 import requests
+import argparse
 from PIL import Image, ImageTk
 import tkinter as tk
-url = 'http://127.0.0.1:7860'
+
 payloads = {
     "beffio Moons": {
         "prompt": "alien looking, moon landscape beffiomoons",
         "sampling_method": "other_method",
-        "model": "beffio-beffio-moons_2600.safetensors",
+        "model": "beffio-moons_2600.safetensors",
         "sampling_method": "Euler a",
-        "steps": 50,
+        "steps": 24,
         "cfg_scale": 8,
         "width": 1024,
         "height": 512
@@ -20,9 +21,9 @@ payloads = {
         "sampling_method": "other_method",
         "model": "beffio-rocketdogs_2092.safetensors",
         "sampling_method": "Euler a",
-        "steps": 50,
+        "steps": 24,
         "cfg_scale": 8,
-        "width": 1024,
+        "width": 512,
         "height": 512
     },
     "Riven The Sequel to MYST": {
@@ -49,6 +50,9 @@ payloads = {
     # Add more payloads here
 }
 
+parser = argparse.ArgumentParser(description='P1X DOS Dreamer')
+parser.add_argument('--ip', type=str, default='127.0.0.1', help='The IP of the Automatic1111 API endpoint')
+args = parser.parse_args()
 
 def load_model(model_name):
     # Disable the button and dropdown
@@ -59,7 +63,7 @@ def load_model(model_name):
         "sd_model_checkpoint": payloads[model_name]["model"]
     }
 
-    response = requests.post(url=f'{url}/sdapi/v1/options', json=option_payload)
+    response = requests.post(url=f'http://{args.ip}:7860/sdapi/v1/options', json=option_payload)
     payload_var = tk.StringVar(value=model_name)
 
         # Re-enable the button and dropdown
@@ -80,7 +84,7 @@ def generate_image():
     window.update()
 
     payload = payloads[payload_var.get()]
-    response = requests.post(url=f'{url}/sdapi/v1/txt2img', json=payload)
+    response = requests.post(url=f'http://{args.ip}:7860/sdapi/v1/txt2img', json=payload)
 
     r = response.json()
     for i in r['images']:
@@ -126,8 +130,6 @@ counter_label.grid(row=2, column=1,padx=12, pady=6)
 
 generate_button = tk.Button(window, text="    DREAM    ", command=generate_image,fg='white', bg='blue')
 generate_button.grid(row=2, column=2,padx=12, pady=6)
-
-load_model(payloads_list[0])
 
 window.mainloop()
 
