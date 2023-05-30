@@ -59,7 +59,7 @@ def load_model(model_name):
     generate_button.config(state="disabled", text="...")
     payload_dropdown.config(state="disabled")
 
-    if model_name == "--- CHOOSE MODEL ---"
+    if model_name == "--- CHOOSE MODEL ---":
         return
 
     option_payload = {
