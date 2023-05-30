@@ -82,7 +82,7 @@ def generate_image():
     window.update()
 
     payload = payloads[payload_var.get()]
-    response = requests.post(url='http://127.0.0.1:7860/sdapi/v1/txt2img', json=payload)
+    response = requests.post(url=f'{url}/sdapi/v1/txt2img', json=payload)
 
     r = response.json()
     for i in r['images']:
