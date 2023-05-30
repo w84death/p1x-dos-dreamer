@@ -32,3 +32,13 @@ App for connecting to the Stable Diffusion API and generaing DOS adventure games
 Trained on DreamBooth, automatic1111.
 - nVidia 3080 TI RTX, 24GB VRAM
 - ~35min
+
+## Usage
+
+### Automatic1111
+
+Run with ``` .\webui.bat --listen --api``` parameters.
+
+### P1X DOS Dreamer
+
+Run ```dreamer.exe``` for local backend or ```.\dreamer.exe --ip 192.168.1.123``` for backend on a different PC.

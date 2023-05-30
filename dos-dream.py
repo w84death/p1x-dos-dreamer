@@ -69,7 +69,7 @@ def generate_image():
     generate_button.config(state="disabled", text="...")
     payload_dropdown.config(state="disabled")
 
-    info_label.config(text="Dreaming of a befio artwork...")
+    info_label.config(text="Dreaming of an old game...")
     window.update()
 
     payload = payloads[payload_var.get()]
@@ -105,7 +105,7 @@ def save_image():
 
 
 window = tk.Tk()
-window.title("P1X DOS Dreamer // alpha1 / by Krzysztof Krystian Jankowski")
+window.title("P1X DOS Dreamer // alpha-1 / by Krzysztof Krystian Jankowski")
 window.geometry('1048x608')
 window.configure(bg='black')
 
