@@ -5,26 +5,49 @@ from PIL import Image, ImageTk
 import tkinter as tk
 url = 'http://127.0.0.1:7860'
 payloads = {
-    "Indiana Jones® and the Fate of Atlantis": {
-        "prompt": "screenshot from DOS game p1xindianajones",
-        "sampling_method": "DPM++ 2M Karras",
-        "model": "p1x-indianajonesdos/p1x-indianajonesdos_6800.safetensors",
-        "sampling_method": "Euler a",
-        "steps": 14,
-        "cfg_scale": 7,
-        "width": 1024,
-        "height": 512
-    },
     "Riven The Sequel to MYST": {
         "prompt": "p1xriven",
         "sampling_method": "other_method",
-        "model": "p1x-rivendos/p1x-rivendos_3100.safetensors",
+        "model": p1x-rivendos_3100.safetensors",
         "sampling_method": "Euler a",
         "steps": 28,
         "cfg_scale": 8,
         "width": 1024,
         "height": 512
     },
+    "Indiana Jones® and the Fate of Atlantis": {
+        "prompt": "screenshot from DOS game p1xindianajones",
+        "sampling_method": "DPM++ 2M Karras",
+        "model": "p1x-indianajonesdos_6800.safetensors",
+        "sampling_method": "Euler a",
+        "steps": 14,
+        "cfg_scale": 7,
+        "width": 1024,
+        "height": 512
+    },
+    "beffio Rocket Dogs": {
+        "prompt": "rocket beffiorocketdogs",
+        "sampling_method": "other_method",
+        "model": "beffio-rocketdogs_2092.safetensors",
+        "sampling_method": "Euler a",
+        "steps": 50,
+        "cfg_scale": 8,
+        "width": 1024,
+        "height": 512
+    },
+    ,
+    "beffio Moons": {
+        "prompt": "alien looking, moon landscape beffiomoons",
+        "sampling_method": "other_method",
+        "model": "beffio-beffio-moons_2600.safetensors",
+        "sampling_method": "Euler a",
+        "steps": 50,
+        "cfg_scale": 8,
+        "width": 1024,
+        "height": 512
+    }
+
+
     # Add more payloads here
 }
 
